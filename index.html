@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lodash源码分析</title>
+  </head>
+  <body>
+    <button id="btn">点击</button>
+    <script src="lodash/debounce/debounce.js"></script>
+    <script>
+      const btn = document.querySelector("#btn")
+      btn.addEventListener(
+        "click",
+        debounce(
+          () => {
+            console.log("ssssssssssssssss")
+          },
+          1000,
+          {
+            maxWait: 1500,
+          }
+        )
+      )
+    </script>
+  </body>
+</html>
