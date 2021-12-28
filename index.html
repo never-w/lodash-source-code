@@ -9,6 +9,7 @@
   <body>
     <button id="btn">点击</button>
     <script src="lodash/debounce/debounce.js"></script>
+    <script src="lodash/chunk/chunk.js"></script>
     <script>
       const btn = document.querySelector("#btn")
       btn.addEventListener(
@@ -23,6 +24,10 @@
           }
         )
       )
+
+      // ---------------------------
+      const arr = [1, 2, 3, 4]
+      console.log(chunk(arr, 2), "---------")
     </script>
   </body>
 </html>
