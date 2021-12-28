@@ -12,7 +12,7 @@ function chunk(array, size = 1) {
   let resIndex = 0
   const result = new Array(Math.ceil(length / size))
 
-  // 当累加的index值>=array的length停止循环
+  // 当累加的index值 >= array的length停止循环
   while (index < length) {
     // 依次设置区块的值
     result[resIndex++] = array.slice(index, (index += size))
