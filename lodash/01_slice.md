@@ -53,7 +53,7 @@ end = end == null ? length : end
 
 start 没有传入默认为 0 ，end 没有传入默认为数组长度
 
-### 传入的 start 为负数时
+### 处理 start
 
 ```js
 if (start < 0) {
@@ -61,7 +61,7 @@ if (start < 0) {
 }
 ```
 
-当`start`为负数时 `start = start+ length`，但是当 `start` 的绝对值大于 `length` 时 `start = 0`
+当`start`为负数时 `start = start+ length`，但是当 `start` 的绝对值大于 `length` 时 `start = 0`，`start >>>= 0`相当于取整数且 `start>=0`
 
 ### 处理 end
 
