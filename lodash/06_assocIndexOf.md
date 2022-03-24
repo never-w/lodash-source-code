@@ -16,4 +16,4 @@ function assocIndexOf(array, key) {
 
 ### 分析
 
-函数比较简单。。。。。。。。
+函数比较简单。。。。。。。
