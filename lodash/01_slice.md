@@ -24,7 +24,7 @@ function slice(array, start, end) {
 
   let index = -1
   const result = new Array(length)
-  while (++index) {
+  while (++index < length) {
     result[index] = array(start + index)
   }
   return result
@@ -81,7 +81,7 @@ length = start > end ? 0 : (end - start) >>> 0
 ```js
 let index = -1
 const result = new Array(length)
-while (++index) {
+while (++index < length) {
   result[index] = array(start + index)
 }
 return result
