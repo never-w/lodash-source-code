@@ -63,3 +63,26 @@ class ListCache {
 ### 分析
 
 `Hash缓存`只能缓存 `key`为字符串和 `Symbol`，`listCache`则 `key`是任意类型
+
+### delete 分析
+
+```js
+delete(key) {
+    const data = this.__data__
+    const index = assocIndexOf(data, key)
+
+    if (index < 0) {
+      return false
+    }
+    const lastIndex = data.length - 1
+    if (index == lastIndex) {
+      data.pop()
+    } else {
+      data.splice(index, 1)
+    }
+    --this.size
+    return true
+  }
+```
+
+这里 `if (index == lastIndex)`判断是不是数组最后一项，如果是最后一项则使用 `pop`删除，不是最后一项则用 `splice`，因为 `pop` 比`splice`性能好大概 `17%`
