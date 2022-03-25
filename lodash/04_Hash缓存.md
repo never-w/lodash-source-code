@@ -46,3 +46,14 @@ export default Hash
 ### 分析
 
 其实跟原生 Map 差不多
+
+### clear 方法分析
+
+```js
+  clear() {
+    this.__data__ = Object.create(null)
+    this.size = 0
+  }
+```
+
+这里想说的是 `clear` 方法它既可以清空缓存还可以初始化缓存对象，这里使用 `Object.create(null)`它目的是这样创建的对象跟 `this.__data__ = {}`区别是它不会继承原型，所以缓存不会被原型干扰这样用来做缓存更合适
