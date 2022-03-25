@@ -1,9 +1,9 @@
 {
   "name": "lodash-analysis-source-code",
-  "type":"module",
+  "type": "module",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "",
   "repository": "git@github.com:never-w/lodash-source-code.git",
-  "author": "yinqiao <1737666820@qq.com>",
+  "author": "yinqiao",
   "license": "MIT"
 }
